@@ -6,19 +6,19 @@ import { useState, useRef } from "react"
 
 const mockData = [
   {
-    id: brithday,
+    id: "brithday",
     isDone: false,
     content: "생일 파티",
     date: new Date().getTime()
   },
   {
-    id: married,
+    id: "married",
     isDone: false,
     content: "결혼식",
     date: new Date().getTime()
   },
   {
-    id: running,
+    id: "running",
     isDone: false,
     content: "러닝",
     date: new Date().getTime()
@@ -33,7 +33,7 @@ function App() {
 
   const onCreate = (content) => {
     const newTodo = {
-      id: idRef.current++,
+      id: `todo-${idRef.current++}`,
       isDone: false,
       content: content,
       date: new Date().getTime()
@@ -46,7 +46,7 @@ function App() {
 
     setTodos((prev) =>
       prev.map((todo) =>
-        todo.id == targetId
+        todo.id === targetId
           ? { ...todo, ...updates }
           : todo
       )

@@ -1,20 +1,44 @@
+
 .TodoList {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-TodoList >input {
-    border: none;
-    border-bottom: 1px solid rgb(220, 220, 220);
+.TodoList h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #304637;
 }
 
-.TodoList >input:focus {
-    border-bottom: 1px solid rgb(37, 147, 255);
+.TodoList > input {
+    width: 100%;
+    padding: 12px 16px;
+
+    background-color: #F0F5EB;
+    border: 1px solid #DCE6D6;
+    border-radius: 10px;
+
+    font-size: 14px;
+    color: #304637;
+
+    outline: none;
+    transition: 0.2s;
+}
+
+.TodoList > input::placeholder {
+    color: #869582;
+}
+
+.TodoList > input:focus {
+    background-color: #FFFFFF;
+    border-color: #39734F;
+    box-shadow: 0 0 0 3px rgba(57, 115, 79, 0.1);
 }
 
 .TodoList .todos-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
 }

@@ -1,3 +1,4 @@
+
 .Editor {
     display: flex;
     gap: 10px;
@@ -5,16 +6,48 @@
 
 .Editor input {
     flex: 1;
-    padding: 15px;
-    border: 1px solid rgb(220,220,220);
-    border-radius: 5px;
+    min-width: 0;
+    padding: 15px 16px;
+
+    background-color: #F0F5EB;
+    border: 1px solid #DCE6D6;
+    border-radius: 10px;
+
+    font-size: 14px;
+    color: #304637;
+    outline: none;
+    transition: 0.2s;
+}
+
+.Editor input::placeholder {
+    color: #869582;
+}
+
+.Editor input:focus {
+    background-color: #FFFFFF;
+    border-color: #39734F;
+    box-shadow: 0 0 0 3px rgba(57, 115, 79, 0.1);
 }
 
 .Editor button {
     cursor: pointer;
     width: 80px;
+
+    background-color: #39734F;
+    color: #FFFFFF;
+
     border: none;
-    background-color: rgb(34,147,255);
-    color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.Editor button:hover {
+    background-color: #2A5B3D;
+}
+
+.Editor button:active {
+    transform: scale(0.96);
 }

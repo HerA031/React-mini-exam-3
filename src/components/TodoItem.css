@@ -1,52 +1,98 @@
+
 .TodoItem {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgb(240, 240, 240);
+    gap: 14px;
+
+    padding: 18px 14px;
+    background-color: #F0F5EB;
+    border: 1px solid #DCE6D6;
+    border-radius: 12px;
+
+    transition: 0.2s;
 }
 
-.TodoItem input {
+.TodoItem:hover {
+    background-color: #E7EFE0;
+    border-color: #B8CFAB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(48, 70, 55, 0.06);
+}
+
+/* 체크박스 */
+.TodoItem input[type="checkbox"] {
     cursor: pointer;
     width: 18px;
     height: 18px;
+    flex-shrink: 0;
+    accent-color: #39734F;
 }
 
-.TodoItem input[type="checkbox"] {
-    accent-color: gray;
-}
-
+/* 약속 내용 */
 .TodoItem .content {
     flex: 1;
+    min-width: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #304637;
+    overflow-wrap: anywhere;
 }
 
+/* 날짜 */
 .TodoItem .date {
-    font-size: 14px;
-    color: gray;
+    font-size: 12px;
+    color: #869582;
+    white-space: nowrap;
 }
 
+/* 버튼 영역 */
 .btn-wrap {
     display: flex;
-    gap: 10px;
+    gap: 6px;
 }
 
 .btn-wrap button {
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 600;
+
     border: none;
-    border-radius: 5px;
-    padding: 5px;
-    color: white;
+    border-radius: 8px;
+    padding: 7px 10px;
+
+    transition: 0.2s;
 }
 
+/* 수정 버튼 */
 .updateBtn {
-    background-color: rgb(83, 180, 45);
-}
-.deleteBtn {
-    background-color: rgb(219, 48, 48);
+    background-color: #DCEBD5;
+    color: #39734F;
 }
 
-.isDone .content, .isDone .date {
+.updateBtn:hover {
+    background-color: #39734F;
+    color: #FFFFFF;
+}
+
+/* 삭제 버튼 */
+.deleteBtn {
+    background-color: #F5E3DF;
+    color: #B96B61;
+}
+
+.deleteBtn:hover {
+    background-color: #B96B61;
+    color: #FFFFFF;
+}
+
+/* 완료한 약속 */
+.TodoItem.isDone {
+    background-color: #E8EDE4;
+    opacity: 0.65;
+}
+
+.isDone .content,
+.isDone .date {
     text-decoration: line-through;
-    color: gray;
+    color: #869582;
 }

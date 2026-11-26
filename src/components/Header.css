@@ -1,3 +1,15 @@
+
+.Header h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #869582;
+}
+
 .Header h1 {
-    color: rgb(37,147,255);
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #39734F;
 }
